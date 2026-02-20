@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>S3 Auditor Tactical Installer</title>
+    <script type="module" src="https://unpkg.com/esp-web-tools@10/dist/web-tools.js"></script>
+    <style>
+        body { font-family: sans-serif; text-align: center; padding: 50px; background: #121212; color: white; }
+        .card { background: #1e1e1e; padding: 30px; border-radius: 10px; display: inline-block; border: 1px solid #333; }
+        h1 { color: #00ff00; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>S3 Auditor: Tactical Flash</h1>
+        <p>Connect your ESP32-S3 via USB and click install.</p>
+        
+        <esp-web-install-button manifest="manifest.json">
+            <button slot="activate">CONNECT & INSTALL</button>
+        </esp-web-install-button>
+    </div>
+</body>
+</html>
