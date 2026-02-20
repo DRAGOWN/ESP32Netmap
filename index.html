@@ -1,25 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>S3 Auditor Tactical Installer</title>
-    <script 
-      type="module" 
-      src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module">
-    </script>
+    <title>S3 Auditor Tactical Suite</title>
+    <script type="module" src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module"></script>
+    <script type="module" src="https://unpkg.com/esp-web-tools@10/dist/web/console-button.js?module"></script>
+    
     <style>
-        body { font-family: sans-serif; text-align: center; padding: 50px; background: #121212; color: white; }
-        .card { background: #1e1e1e; padding: 30px; border-radius: 10px; display: inline-block; border: 1px solid #333; }
-        h1 { color: #00ff00; }
+        body { font-family: 'Courier New', monospace; text-align: center; padding: 30px; background: #0a0a0a; color: #00ff00; }
+        .container { max-width: 800px; margin: auto; background: #151515; padding: 40px; border-radius: 8px; border: 1px solid #333; box-shadow: 0 0 20px rgba(0,255,0,0.1); }
+        h1 { text-transform: uppercase; letter-spacing: 4px; border-bottom: 1px solid #333; padding-bottom: 20px; }
+        .controls { display: flex; justify-content: center; gap: 20px; margin-top: 30px; }
+        
+        /* Tactical Button Styling */
+        button { 
+            background: #00ff00; color: #000; border: none; padding: 15px 25px; 
+            font-weight: bold; cursor: pointer; text-transform: uppercase;
+        }
+        button:hover { background: #00cc00; }
+        
+        .status-msg { margin-top: 20px; color: #888; font-size: 0.9em; }
+        esp-web-console-button { --esp-tools-button-color: #444; --esp-tools-button-text-color: #fff; }
     </style>
 </head>
 <body>
-    <div class="card">
-        <h1>S3 Auditor: Tactical Flash</h1>
-        <p>Connect your ESP32-S3 via USB and click install.</p>
-        
-        <esp-web-install-button manifest="manifest.json">
-            <button slot="activate">CONNECT & INSTALL</button>
-        </esp-web-install-button>
+    <div class="container">
+        <h1>S3 Auditor v1.0</h1>
+        <p>[ System Ready for Deployment ]</p>
+
+        <div class="controls">
+            <esp-web-install-button manifest="manifest.json">
+                <button slot="activate">Flash Firmware</button>
+            </esp-web-install-button>
+
+            <esp-web-console-button>
+                <button slot="activate">Open Logs</button>
+            </esp-web-console-button>
+        </div>
+
+        <div class="status-msg">
+            <p>Note: Use Chrome or Edge. Ensure board is in Bootloader mode (Hold BOOT + Tap RST) if connection fails.</p>
+        </div>
     </div>
 </body>
 </html>
