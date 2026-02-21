@@ -4,7 +4,7 @@ A simple network scanner on ESP32-S3.
 
 Tested on ESP32-S3-N16-R8
 
-<img width="350" alt="image" src="https://github.com/user-attachments/assets/46975c46-979f-414e-83fb-fe0430b3b8db" />
+<img width="310" alt="image" src="https://github.com/user-attachments/assets/0f5ffb5b-28cc-4ea4-b0ff-7f672f0e19dc" />
 
 
 <img width="350" alt="image" src="https://github.com/user-attachments/assets/89151814-d65a-4c68-b78b-405f60b4774f" />
